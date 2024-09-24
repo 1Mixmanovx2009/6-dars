@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+
+}
+
+.active {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  
+  .active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .active:hover::after {
+    transform: scaleX(0);
+    transform-origin: bottom;
+  }
